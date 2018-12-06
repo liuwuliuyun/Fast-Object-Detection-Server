@@ -8,6 +8,9 @@ import time
 import torch
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+import matplotlib
+matplotlib.use('Agg')
+
 
 Tensor = torch.cuda.FloatTensor
 # Bounding-box colors

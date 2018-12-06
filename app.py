@@ -4,6 +4,7 @@ from werkzeug.utils import secure_filename
 import os
 from detect import image_prepare, detect
 from datetime import timedelta
+from waitress import serve
 
 # 设置允许的文件格式
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'PNG', 'JPG', 'JPEG', 'GIF'}
@@ -62,4 +63,5 @@ def upload():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    #app.run(host='0.0.0.0', port=5000, debug=True)
+    serve(app)
