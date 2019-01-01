@@ -3,7 +3,6 @@ from flask import Flask, render_template, request, redirect, url_for, make_respo
 from werkzeug.utils import secure_filename
 import os
 from detect import image_prepare, detect
-from datetime import timedelta
 from waitress import serve
 
 # 设置允许的文件格式
@@ -15,8 +14,6 @@ def allowed_file(filename):
 
 
 app = Flask(__name__)
-# 设置静态文件缓存过期时间
-# app.send_file_max_age_default = timedelta(seconds=600)
 
 
 @app.route('/', methods=['GET'])
@@ -63,5 +60,7 @@ def upload():
 
 
 if __name__ == '__main__':
-    #app.run(host='0.0.0.0', port=5000, debug=True)
-    serve(app)
+    # Running Local
+    app.run(host='0.0.0.0', port=5000, debug=True)
+    # Running remote
+    # serve(app)
