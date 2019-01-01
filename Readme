@@ -57,3 +57,6 @@ python app.py // start flask service and you can find this website running at ht
 You need to comment line 64 and uncomment line 66 in app.py first
 cd $ROOTDIR$ // cd into the root project directory
 python app.py // start flask service and you can find this website running at http://YOURIPADDR:8080/ and can be accessed remotely.
+
+##4.Trouble Shooting
+First detection will be much slower because system need to load weights and networks into memory.
