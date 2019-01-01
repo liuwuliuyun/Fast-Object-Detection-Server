@@ -66,10 +66,8 @@ def create_modules(module_defs):
 
         elif module_def["type"] == "route":
             layers = [int(x) for x in module_def["layers"].split(",")]
-            # modify according to https://github.com/eriklindernoren/PyTorch-YOLOv3/issues/82
             # Use this if yolo.cfg is used
             filters = sum([output_filters[layer_i] for layer_i in layers])
-            # Use this if yolo-tiny.cfg is used
             '''
             filters = 0
             for layer_i in layers:
