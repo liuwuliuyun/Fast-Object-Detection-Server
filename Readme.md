@@ -1,22 +1,22 @@
-#Installation and Running Guide
-##Author: Yun Liu
-##Date: 2019/01/01
+# Installation and Running Guide
+## Author: Yun Liu
+## Date: 2019/01/01
 
-##1. Devices, Drivers and System
+## 1. Devices, Drivers and System
 
-###1.1 GPU Devices
+### 1.1 GPU Devices
 We only test this program on Nvidia GTX 1060 6GB and Nvidia GTX 1080 Ti, so make sure you have those devices before running this program.
 
-###1.2 Drivers
-###1.2.1 CUDA Drivers
+### 1.2 Drivers
+### 1.2.1 CUDA Drivers
 Make sure you install CUDA 9.0 as your graphics card driver.
-###1.2.2 Cudnn
+### 1.2.2 Cudnn
 Make sure you install Cudnn 7.x on your computer.
 
-###1.3 System
+### 1.3 System
 We support Windows 10 x64 professional, but it should work fine with Ubuntu 16.04 LTS and Ubuntu 18.04 LTS.
 
-##2. Python Libs
+## 2. Python Libs
 Following packages should be installed before running:
 
 PackageName Version
@@ -50,15 +50,15 @@ torchvision	0.2.1
 tqdm	4.28.1
 waitress	1.1.0
 
-##3.Running
-###3.1 Local
+## 3.Running
+### 3.1 Local
 cd $ROOTDIR$ // cd into the root project directory
 python app.py // start flask service and you can find this website running at http://localhost:5000/
 
-###3.2 Remote
+### 3.2 Remote
 You need to comment line 64 and uncomment line 66 in app.py first
 cd $ROOTDIR$ // cd into the root project directory
 python app.py // start flask service and you can find this website running at http://YOURIPADDR:8080/ and can be accessed remotely.
 
-##4.Trouble Shooting
+## 4.Trouble Shooting
 First detection will be much slower because system need to load weights and networks into memory.
